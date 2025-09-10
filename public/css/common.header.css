@@ -1,0 +1,172 @@
+html, body {
+    width: 100%;
+    margin: 0; /* 不要なマージンを削除 */
+    padding: 0; /* 不要なパディングを削除 */
+}
+
+.logo {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: 50px;
+    text-decoration: none; /* 下線を消す */
+    display: block;
+  }
+
+  .logo img {
+    width: 80px; /* 必要に応じて変更 */
+    height: auto;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .service-name {
+    font-size: 50px;
+    position: absolute; /* ページ全体に対して中央配置 */
+    left: 50%;
+    transform: translateX(-50%); /* 画面の中央に配置 */
+    text-align: center; /* 中央揃え */
+  }
+
+  /* チェックボックスを非表示に */
+#menu-toggle {
+  position: absolute;
+  left: -9999px;
+}
+.nav-links {
+  display: none;
+}
+.menu-icon{
+  display: none;
+}
+/* スマホ表示ではドロップダウンを非表示 */
+@media (max-width: 850px) {
+  .nav-item.dropdown {
+    display: none;
+  }
+}
+/* スマホ用 */
+@media (max-width: 850px) {
+  header{
+    padding: 0;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background: white;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: inherit;
+    width: 100%;
+    border: 1px solid #ccc;
+    right: 10px;
+    text-align: center;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+    top: 100px;
+    list-style: none;
+    width: 50%;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  .service-name {
+    font-size: px;
+  }
+  .logo {
+
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: 0px;
+    text-decoration: none; /* 下線を消す */
+}
+.nav-links {
+  width: 50%;         /* または 50% など */
+  max-width: 160px;    /* 最大幅を指定（必要なら） */
+  box-sizing: border-box; /* paddingを含めて幅を計算 */
+  text-decoration: none;
+}
+.nav-links li {
+  padding: 5px 15px;
+
+}
+.a1{
+  text-decoration: none;
+  color: #333;
+}
+
+}
+.date-group,
+.time-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+/* 幅600px以下で折り返す */
+@media screen and (max-width: 600px) {
+  .date-group,
+  .time-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; /* 適度な余白 */
+      width: 300px;
+      
+  }
+  .input-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    width: 300px;
+}
+  .w70in{
+    width: 80%;
+  }
+  .w600 {
+    width: 100%;
+  }
+  .h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .textarea{
+    height: 75px;
+  }
+  p {
+    line-height: 0.5; /* 通常は 1.4～1.8 くらいが読みやすい */
+}
+h1{
+  font-size: 20px;
+}
+.service-name{
+  font-size: 40px;
+}
+.return{
+  padding-bottom: 30px;
+}
+.p-bottom{
+  margin-top: 0;
+}
+}
